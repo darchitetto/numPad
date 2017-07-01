@@ -1,0 +1,61 @@
+<div>
+  <div>
+      <div class="top-display">
+        <div class="exercise">
+          <span>Pushups</span>
+        </div>
+
+        <div>
+          <span class="error" [@toggleError]='errorState'>Not a valid number</span>
+        </div>
+
+        <div class="amount-container">
+          <label class="amount">{{displayAmount}}</label>
+        </div>
+
+        <div class="week-container">
+          <span class="week-row">Week 7</span>
+          <span class="week-row">150200</span>
+        </div>
+
+      </div>
+      <div class="numPad">
+        <div class="container">
+          <div *ngFor="let label of (buttonLabel ? buttonLabel.slice(0,3): []); let i = index">
+            <number-button
+              [buttonLabel]=label.value
+              (onAddToTotal)="onAddToTotal($event)">
+            </number-button>
+          </div>
+        </div>
+
+        <div class="container">
+          <div *ngFor="let label of (buttonLabel ? buttonLabel.slice(3,6): []); let i = index">
+            <number-button
+              [buttonLabel]=label.value
+              (onAddToTotal)="onAddToTotal($event)">
+            </number-button>
+          </div>
+        </div>
+
+        <div class="container">
+          <div *ngFor="let label of (buttonLabel ? buttonLabel.slice(6,9): []); let i = index">
+            <number-button
+              [buttonLabel]=label.value
+              (onAddToTotal)="onAddToTotal($event)">
+            </number-button>
+          </div>
+        </div>
+
+        <div class="container">
+          <div *ngFor="let label of (buttonLabel ? buttonLabel.slice(9,12): []); let i = index">
+            <number-button
+              [buttonLabel]=label.value
+              (onAddToTotal)="onAddToTotal($event)">
+            </number-button>
+          </div>
+        </div>
+
+      </div>
+  </div>
+</div>

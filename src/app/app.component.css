@@ -1,0 +1,51 @@
+.top-display{
+  display:flex;
+  flex-direction: column;
+  height: 150px;
+  width: 180px;
+  background-color: black;
+}
+.exercise{
+  margin-top: 20px;
+  flex: 1 30%;
+  color: #babfc6;
+  font-size: 20px;
+  font-weight: 100;
+}
+.amount-container{
+  flex: 1 45%;
+  overflow-x: hidden;
+}
+.amount{
+  border: none;
+  color: yellow;
+  font-size: 200%;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+.week-container{
+  flex: 1 25%;
+  display: flex;
+  flex-direction: row;
+}
+.week-row{
+  flex: 1 50%;
+  color: #babfc6;
+  font-size: 10px;
+  font-weight: 100;
+}
+.numPad{
+  height: 240px;
+  width: 180px;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+}
+.error{
+  border: none;
+  color: red;
+  font-size: 100%;
+  font-weight: 200;
+  opacity: 0;
+}
