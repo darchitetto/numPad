@@ -20,42 +20,14 @@
 
       </div>
       <div class="numPad">
-        <div class="container">
-          <div *ngFor="let label of (buttonLabel ? buttonLabel.slice(0,3): []); let i = index">
+        <div class="container" *ngFor="let j of [1,2,3,4]; ">
+          <div *ngFor="let label of (buttonLabel ? buttonLabel.slice((j-1)*3, j*3): []); let i = index">
             <number-button
               [buttonLabel]=label.value
               (onAddToTotal)="onAddToTotal($event)">
             </number-button>
           </div>
         </div>
-
-        <div class="container">
-          <div *ngFor="let label of (buttonLabel ? buttonLabel.slice(3,6): []); let i = index">
-            <number-button
-              [buttonLabel]=label.value
-              (onAddToTotal)="onAddToTotal($event)">
-            </number-button>
-          </div>
-        </div>
-
-        <div class="container">
-          <div *ngFor="let label of (buttonLabel ? buttonLabel.slice(6,9): []); let i = index">
-            <number-button
-              [buttonLabel]=label.value
-              (onAddToTotal)="onAddToTotal($event)">
-            </number-button>
-          </div>
-        </div>
-
-        <div class="container">
-          <div *ngFor="let label of (buttonLabel ? buttonLabel.slice(9,12): []); let i = index">
-            <number-button
-              [buttonLabel]=label.value
-              (onAddToTotal)="onAddToTotal($event)">
-            </number-button>
-          </div>
-        </div>
-
       </div>
   </div>
 </div>
