@@ -7,16 +7,16 @@ import { AppComponent } from './app.component';
 import { NumberButton } from './components/numberButton/numberButton.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NumberButton,
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MdIconModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		NumberButton,
+	],
+	imports: [
+		BrowserModule,
+		BrowserAnimationsModule,
+		MdIconModule
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }

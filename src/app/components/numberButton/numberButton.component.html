@@ -1,9 +1,9 @@
 <div class="numberButton" >
-  <div *ngIf="buttonLabel != '<'; else backspace">
+	<div *ngIf="buttonLabel != '<'; else backspace">
     <button (click)="addToTotal(buttonLabel)" [@toggleState]="shouldToggle">{{buttonLabel}}</button>
-  </div>
+	</div>
 
-  <ng-template #backspace>
+	<ng-template #backspace>
     <button (click)="addToTotal(buttonLabel)" [@toggleState]="shouldToggle"><md-icon>backspace</md-icon></button>
-  </ng-template>
+	</ng-template>
 </div>

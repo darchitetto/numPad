@@ -1,33 +1,33 @@
 <div>
-  <div>
-      <div class="top-display">
-        <div class="exercise">
-          <span>Pushups</span>
-        </div>
+	<div>
+			<div class="top-display">
+				<div class="exercise">
+					<span>Pushups</span>
+				</div>
 
-        <div>
-          <span class="error" [@toggleError]='errorState'>Not a valid number</span>
-        </div>
+				<div>
+					<span class="error" [@toggleError]='errorState'>Not a valid number</span>
+				</div>
 
-        <div class="amount-container">
-          <label class="amount">{{displayAmount}}</label>
-        </div>
+				<div class="amount-container">
+					<label class="amount">{{displayAmount}}</label>
+				</div>
 
-        <div class="week-container">
-          <span class="week-row">Week 7</span>
-          <span class="week-row">150200</span>
-        </div>
+				<div class="week-container">
+					<span class="week-row">Week 7</span>
+					<span class="week-row">150200</span>
+				</div>
 
-      </div>
-      <div class="numPad">
-        <div class="container" *ngFor="let j of [1,2,3,4]; ">
-          <div *ngFor="let label of (buttonLabel ? buttonLabel.slice((j-1)*3, j*3): []); let i = index">
-            <number-button
-              [buttonLabel]=label.value
-              (onAddToTotal)="onAddToTotal($event)">
-            </number-button>
-          </div>
-        </div>
-      </div>
-  </div>
+			</div>
+			<div class="numPad">
+				<div class="container" *ngFor="let j of [1,2,3,4]; ">
+					<div *ngFor="let label of (buttonLabel ? buttonLabel.slice((j-1)*3, j*3): []); let i = index">
+						<number-button
+							[buttonLabel]=label.value
+							(onAddToTotal)="onAddToTotal($event)">
+						</number-button>
+					</div>
+				</div>
+			</div>
+	</div>
 </div>
