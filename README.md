@@ -1,6 +1,6 @@
 # NumPad
 
-This project is writtn in Angular 4
+This project is written in Angular 4
 
 ## Purpose
 
